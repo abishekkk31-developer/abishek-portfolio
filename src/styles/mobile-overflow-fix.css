@@ -1,0 +1,472 @@
+/* =====================================================
+   MOBILE OVERFLOW + IPHONE ALIGNMENT FIX
+===================================================== */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   ABOUT MOBILE FIX
+===================================================== */
+
+@media (max-width: 700px) {
+  .about {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .about__grid,
+  .about__story,
+  .about__workspace,
+  .about__strengths {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about__story {
+    order: 2;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .about__workspace {
+    order: 1;
+    min-width: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .about__laptop {
+    width: min(350px, 82vw);
+    max-width: 82vw;
+  }
+
+  .about__laptop-screen {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about__tech-floater,
+  .about__status-card {
+    max-width: 30vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .about__tech-floater--1 {
+    left: 1%;
+  }
+
+  .about__tech-floater--2 {
+    right: 1%;
+  }
+
+  .about__tech-floater--3 {
+    left: 1%;
+  }
+
+  .about__tech-floater--4 {
+    right: 1%;
+  }
+
+  .about__tech-floater--5 {
+    right: 8%;
+  }
+
+  .about__status-card--one {
+    right: 1%;
+  }
+
+  .about__status-card--two {
+    left: 1%;
+  }
+
+  .about__floor {
+    max-width: 85vw;
+  }
+
+  .about__strengths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .about__strength-card {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .about__strength-card h4,
+  .about__strength-card p {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =====================================================
+   SMALL IPHONE FIX
+===================================================== */
+
+@media (max-width: 460px) {
+  .about__workspace {
+    min-height: 390px;
+  }
+
+  .about__laptop {
+    width: min(280px, 76vw);
+    max-width: 76vw;
+  }
+
+  .about__laptop-screen {
+    height: 180px;
+  }
+
+  .about__tech-floater {
+    max-width: 25vw;
+    padding: 6px;
+    gap: 4px;
+    font-size: 5.5px;
+  }
+
+  .about__tech-floater svg {
+    flex-shrink: 0;
+    font-size: 9px;
+  }
+
+  .about__status-card {
+    max-width: 29vw;
+    min-width: 0;
+    padding: 6px;
+  }
+
+  .about__status-card strong,
+  .about__status-card small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .about__status-card--one {
+    right: 0;
+  }
+
+  .about__status-card--two {
+    left: 0;
+  }
+
+  .about__workspace-badge {
+    max-width: 85vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .about__strengths {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   PROJECTS MOBILE FIX
+===================================================== */
+
+.projects {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.projects__card,
+.projects__preview,
+.projects__browser,
+.projects__info,
+.projects__info-inner {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.projects__card {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects__preview {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects__browser {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.projects__mock-ui {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.projects__mock-sidebar {
+  flex: 0 0 110px;
+  min-width: 0;
+}
+
+.projects__mock-main {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects__mock-header,
+.projects__mock-stats,
+.projects__mock-chart {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.projects__mock-header h4,
+.projects__mock-date,
+.projects__mock-stat-value,
+.projects__mock-stat-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   PROJECTS TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .projects__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .projects__preview {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .projects__browser {
+    width: 100%;
+  }
+
+  .projects__mock-ui {
+    height: 240px;
+  }
+
+  .projects__info {
+    width: 100%;
+    padding: 28px 22px;
+  }
+}
+
+/* =====================================================
+   PROJECTS IPHONE
+===================================================== */
+
+@media (max-width: 480px) {
+  .projects__preview {
+    padding: 12px;
+  }
+
+  .projects__browser-bar {
+    gap: 7px;
+    padding: 8px 9px;
+  }
+
+  .projects__browser-dots {
+    gap: 4px;
+  }
+
+  .projects__browser-dots span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .projects__browser-url {
+    min-width: 0;
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .projects__mock-ui {
+    height: 205px;
+  }
+
+  .projects__mock-sidebar {
+    flex: 0 0 65px;
+    width: 65px;
+    padding: 10px 5px;
+  }
+
+  .projects__mock-logo {
+    font-size: 8px;
+    margin-bottom: 7px;
+  }
+
+  .projects__mock-nav-item {
+    padding: 6px 4px;
+    font-size: 7px;
+    text-align: center;
+  }
+
+  .projects__mock-main {
+    padding: 10px 8px;
+  }
+
+  .projects__mock-header {
+    gap: 5px;
+    margin-bottom: 9px;
+  }
+
+  .projects__mock-header h4 {
+    font-size: 9px;
+  }
+
+  .projects__mock-date {
+    font-size: 7px;
+  }
+
+  .projects__mock-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .projects__mock-stat {
+    min-width: 0;
+    padding: 7px 3px;
+  }
+
+  .projects__mock-stat-value {
+    font-size: 9px;
+  }
+
+  .projects__mock-stat-label {
+    font-size: 6px;
+  }
+
+  .projects__mock-chart {
+    height: 55px;
+    gap: 3px;
+  }
+
+  .projects__mock-label {
+    font-size: 6px;
+    margin-top: 4px;
+  }
+
+  .projects__info {
+    padding: 25px 18px;
+  }
+
+  .projects__info-inner {
+    gap: 15px;
+  }
+
+  .projects__title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+
+  .projects__description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .projects__highlights li {
+    font-size: 12px;
+  }
+
+  .projects__tech {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projects__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .projects__actions a,
+  .projects__actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =====================================================
+   EXTRA SMALL IPHONE
+===================================================== */
+
+@media (max-width: 390px) {
+  .about__laptop {
+    width: 250px;
+    max-width: 72vw;
+  }
+
+  .about__laptop-screen {
+    height: 160px;
+  }
+
+  .about__workspace {
+    min-height: 355px;
+  }
+
+  .about__tech-floater {
+    max-width: 23vw;
+    font-size: 5px;
+  }
+
+  .about__status-card {
+    max-width: 27vw;
+  }
+
+  .projects__mock-sidebar {
+    flex-basis: 58px;
+    width: 58px;
+  }
+
+  .projects__mock-main {
+    padding: 8px 6px;
+  }
+
+  .projects__mock-header h4 {
+    font-size: 8px;
+  }
+
+  .projects__mock-date {
+    font-size: 6px;
+  }
+
+  .projects__mock-stat-value {
+    font-size: 8px;
+  }
+
+  .projects__mock-stat-label {
+    font-size: 5.5px;
+  }
+}
