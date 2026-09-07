@@ -1,0 +1,789 @@
+/* =========================================================
+   ABISHEK PORTFOLIO
+   iPHONE / PREMIUM MOBILE POLISH
+   Optimized for iPhone 14 / 13 / 12 / modern phones
+   Desktop styles remain untouched.
+   ========================================================= */
+
+
+/* =========================================================
+   CORE MOBILE RESET
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img,
+  svg,
+  canvas,
+  video {
+    max-width: 100%;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
+  /* =======================================================
+     GLOBAL CONTAINER
+     ======================================================= */
+
+  .container {
+    width: calc(100% - 28px) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
+  /* =======================================================
+     GLOBAL SECTION ALIGNMENT
+     ======================================================= */
+
+  .section,
+  .skills,
+  .experience,
+  .projects,
+  .about,
+  .education,
+  .certifications,
+  .contact {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .section__header,
+  .section-header,
+  .skills__header {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .section__title,
+  .section-title,
+  .skills__title,
+  .about__title {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .section__subtitle,
+  .section-subtitle,
+  .skills__subtitle {
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+
+  /* =======================================================
+     NAVBAR
+     ======================================================= */
+
+  .navbar {
+    width: calc(100% - 14px) !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar__inner {
+    width: 100%;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .navbar__logo {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .navbar__actions {
+    margin-left: auto;
+  }
+
+
+  /* =======================================================
+     HERO — iPHONE
+     ======================================================= */
+
+  .hero {
+    width: 100%;
+    min-height: 100svh;
+    padding:
+      88px 0
+      max(34px, env(safe-area-inset-bottom));
+  }
+
+  .hero__inner {
+    width: calc(100% - 28px);
+    max-width: 430px;
+    min-height: calc(100svh - 88px);
+    margin: 0 auto;
+    padding:
+      10px 0
+      max(18px, env(safe-area-inset-bottom));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  /* ---------- HERO BADGE ---------- */
+
+  .hero__badge {
+    width: auto;
+    max-width: calc(100% - 10px);
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 8px 11px;
+
+    font-size: 8px;
+    line-height: 1.45;
+    text-align: center;
+
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+
+  /* ---------- HERO NAME ---------- */
+
+  .hero__name {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin:
+      20px auto 0 !important;
+
+    padding: 0 !important;
+
+    text-align: center !important;
+
+    white-space: nowrap !important;
+
+    font-size: clamp(40px, 13.25vw, 62px) !important;
+    line-height: 0.9 !important;
+
+    letter-spacing: -0.078em !important;
+
+    overflow: visible;
+  }
+
+
+  /* ---------- HERO TITLES ---------- */
+
+  .hero__titles {
+    width: 100%;
+    max-width: 330px;
+
+    margin:
+      17px auto 0 !important;
+
+    text-align: center !important;
+    text-wrap: balance;
+
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+
+
+  /* ---------- HERO TAGLINE ---------- */
+
+  .hero__tagline {
+    width: 100%;
+    max-width: 315px;
+
+    margin:
+      9px auto 0 !important;
+
+    text-align: center !important;
+    text-wrap: balance;
+
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+  }
+
+
+  /* ---------- HERO DESCRIPTION ---------- */
+
+  .hero__description {
+    width: 100%;
+    max-width: 325px;
+
+    margin:
+      10px auto 0 !important;
+
+    text-align: center !important;
+    text-wrap: balance;
+
+    font-size: 11.5px !important;
+    line-height: 1.75 !important;
+  }
+
+
+  /* ---------- HERO BUTTONS ---------- */
+
+  .hero__actions {
+    width: 100%;
+    max-width: 340px;
+
+    margin:
+      15px auto 0 !important;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .hero__btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+      0 9px !important;
+
+    text-align: center;
+
+    font-size: 10.5px !important;
+    white-space: nowrap;
+  }
+
+  .hero__btn:last-child {
+    grid-column: 1 / -1;
+  }
+
+
+  /* ---------- HERO VISUAL ---------- */
+
+  .hero__visual {
+    width: 100%;
+    max-width: 360px;
+
+    height: 235px !important;
+    min-height: 235px !important;
+
+    margin:
+      3px auto 0 !important;
+  }
+
+
+  /* =======================================================
+     SKILLS
+     ======================================================= */
+
+  .skills__header {
+    margin-bottom: 24px;
+  }
+
+  .skills__title {
+    font-size: 32px !important;
+    line-height: 1.03 !important;
+  }
+
+  .skills__subtitle {
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+
+  .skills__row {
+    width: max-content;
+    gap: 9px !important;
+  }
+
+  .skills__card,
+  .skill-card {
+    min-width: 126px !important;
+    max-width: 126px;
+    padding: 13px !important;
+    border-radius: 15px !important;
+
+    text-align: center;
+  }
+
+  .skills__icon,
+  .skill-card__icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills__name,
+  .skill-card__name {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+
+    text-align: center;
+    white-space: normal;
+    text-wrap: balance;
+
+    font-size: 10px !important;
+    line-height: 1.35;
+  }
+
+
+  /* =======================================================
+     EXPERIENCE
+     ======================================================= */
+
+  .experience__header {
+    text-align: center;
+  }
+
+  .experience__timeline {
+    width: 100%;
+    max-width: 390px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 12px !important;
+  }
+
+  .experience__item {
+    width: 100%;
+    grid-template-columns: 16px minmax(0, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .experience__card {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 17px !important;
+    border-radius: 18px !important;
+
+    text-align: left;
+  }
+
+  .experience__role {
+    text-align: left;
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+    text-wrap: balance;
+  }
+
+  .experience__company {
+    text-align: left;
+  }
+
+  .experience__date {
+    text-align: left;
+  }
+
+  .experience__card ul {
+    margin-top: 13px;
+    padding-left: 16px;
+  }
+
+  .experience__card li {
+    text-align: left;
+    font-size: 11.5px !important;
+    line-height: 1.72 !important;
+  }
+
+
+  /* =======================================================
+     PROJECTS
+     ======================================================= */
+
+  .projects__header {
+    text-align: center;
+  }
+
+  .projects__grid {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 19px !important;
+    overflow: hidden;
+  }
+
+  .project-card__content {
+    padding: 17px !important;
+    text-align: left;
+  }
+
+  .project-card__title {
+    text-align: left;
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+
+  .project-card__description {
+    width: 100%;
+    text-align: left;
+
+    font-size: 11.5px !important;
+    line-height: 1.72 !important;
+  }
+
+  .project-card__buttons {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .project-card__button {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+
+    text-align: center;
+
+    font-size: 10px !important;
+  }
+
+
+  /* =======================================================
+     ABOUT
+     ======================================================= */
+
+  .about__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px !important;
+  }
+
+  .about__content {
+    width: 100%;
+    max-width: 350px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  }
+
+  .about__title {
+    text-align: center;
+    font-size: 32px !important;
+  }
+
+  .about__text {
+    width: 100%;
+    text-align: center;
+
+    font-size: 12px !important;
+    line-height: 1.78 !important;
+
+    text-wrap: balance;
+  }
+
+  .about__visual {
+    width: 100%;
+    max-width: 360px;
+
+    min-height: 275px !important;
+    height: 275px !important;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* =======================================================
+     EDUCATION
+     ======================================================= */
+
+  .education__header {
+    text-align: center;
+  }
+
+  .education__timeline {
+    width: 100%;
+    max-width: 390px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 12px !important;
+  }
+
+  .education__card {
+    width: 100%;
+    padding: 17px !important;
+    border-radius: 18px !important;
+
+    text-align: left;
+  }
+
+  .education__title {
+    text-align: left;
+
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+  }
+
+  .education__description {
+    text-align: left;
+
+    font-size: 11.5px !important;
+    line-height: 1.72 !important;
+  }
+
+  .education__visual {
+    width: 100%;
+    max-width: 350px;
+
+    min-height: 235px !important;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* =======================================================
+     CERTIFICATIONS
+     ======================================================= */
+
+  .certifications__grid {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 17px !important;
+  }
+
+  .certification-card {
+    width: 100%;
+
+    padding: 18px !important;
+    border-radius: 18px !important;
+
+    text-align: left;
+  }
+
+  .certification-card__title {
+    text-align: left;
+
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+  }
+
+  .certification-card__description {
+    text-align: left;
+
+    font-size: 11.5px !important;
+    line-height: 1.72 !important;
+  }
+
+
+  /* =======================================================
+     CONTACT
+     ======================================================= */
+
+  .contact__header {
+    text-align: center;
+  }
+
+  .contact__grid {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 11px !important;
+  }
+
+  .contact__card {
+    width: 100%;
+    min-height: 67px;
+
+    padding: 13px !important;
+    border-radius: 16px !important;
+  }
+
+  .contact__form {
+    width: 100%;
+
+    padding: 17px !important;
+    border-radius: 18px !important;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 13px !important;
+  }
+
+  .contact__textarea {
+    min-height: 125px;
+    resize: vertical;
+  }
+
+  .contact__submit {
+    width: 100%;
+    min-height: 46px;
+  }
+
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
+
+  .footer__grid {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .footer__brand {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__links {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer__socials {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer__bottom {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   iPHONE-SIZED DEVICES
+   ========================================================= */
+
+@media (min-width: 375px) and (max-width: 430px) {
+
+  .container {
+    width: calc(100% - 28px) !important;
+  }
+
+  .hero__name {
+    font-size: 51px !important;
+  }
+
+  .hero__visual {
+    height: 240px !important;
+    min-height: 240px !important;
+  }
+
+  .section__title,
+  .section-title,
+  .skills__title,
+  .about__title {
+    font-size: 33px !important;
+  }
+}
+
+
+/* =========================================================
+   SAFE AREA — NOTCHED IPHONES
+   ========================================================= */
+
+@supports (padding: max(0px)) {
+
+  @media (max-width: 640px) {
+
+    .navbar {
+      margin-top: max(7px, env(safe-area-inset-top));
+    }
+
+    .hero {
+      padding-bottom:
+        max(34px, env(safe-area-inset-bottom));
+    }
+
+    .footer {
+      padding-bottom:
+        max(24px, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+
+/* =========================================================
+   REDUCE ACCIDENTAL TEXT CLIPPING
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero *,
+  .skills *,
+  .experience *,
+  .projects *,
+  .about *,
+  .education *,
+  .certifications *,
+  .contact *,
+  .footer * {
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
