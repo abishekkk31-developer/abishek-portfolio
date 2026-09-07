@@ -1,0 +1,82 @@
+.futuristic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Pure matte black base */
+.futuristic-bg__base {
+  position: absolute;
+  inset: 0;
+  background-color: #030304;
+}
+
+/* Very subtle central radial glow keeping center clean and dark */
+.futuristic-bg__center-radial {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(179, 0, 27, 0.05) 0%,
+    rgba(10, 10, 14, 0.02) 45%,
+    transparent 70%
+  );
+  filter: blur(80px);
+}
+
+/* Perimeter volumetric glows (concentrated along edges) */
+.futuristic-bg__glow-perimeter {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  pointer-events: none;
+}
+
+.futuristic-bg__glow-perimeter--left {
+  width: 580px;
+  height: 680px;
+  background: radial-gradient(circle, rgba(179, 0, 27, 0.16) 0%, rgba(139, 0, 0, 0.08) 50%, transparent 75%);
+  top: 10%;
+  left: -200px;
+}
+
+.futuristic-bg__glow-perimeter--right {
+  width: 620px;
+  height: 720px;
+  background: radial-gradient(circle, rgba(179, 0, 27, 0.14) 0%, rgba(139, 0, 0, 0.06) 50%, transparent 75%);
+  bottom: 5%;
+  right: -220px;
+}
+
+.futuristic-bg__glow-perimeter--top {
+  width: 700px;
+  height: 350px;
+  background: radial-gradient(ellipse, rgba(179, 0, 27, 0.09) 0%, transparent 70%);
+  top: -150px;
+  left: 30%;
+}
+
+.futuristic-bg__glow-perimeter--bottom {
+  width: 650px;
+  height: 350px;
+  background: radial-gradient(ellipse, rgba(139, 0, 0, 0.08) 0%, transparent 70%);
+  bottom: -150px;
+  left: 20%;
+}
+
+/* 60fps Hardware-accelerated Canvas */
+.futuristic-bg__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}

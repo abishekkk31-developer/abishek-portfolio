@@ -1,0 +1,90 @@
+.section-heading-animated {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  isolation: isolate;
+}
+
+.section-heading-animated__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.95rem;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  will-change: transform, opacity, filter;
+}
+
+.section-heading-animated__tag-dot {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 14px currentColor;
+  animation: sectionHeadingPulse 2.1s ease-in-out infinite;
+}
+
+.section-heading-animated__title {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  will-change: transform, opacity, filter;
+}
+
+.section-heading-animated__subtitle {
+  position: relative;
+  z-index: 5;
+  max-width: 720px;
+  margin-top: 0.9rem;
+  will-change: transform, opacity, filter;
+}
+
+.section-heading-animated__line {
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-top: 1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, currentColor, transparent);
+  transform-origin: left center;
+  animation: sectionHeadingLine 1.15s 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  opacity: 0.75;
+}
+
+@keyframes sectionHeadingPulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.92); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
+@keyframes sectionHeadingLine {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 0.75; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-heading-animated__tag-dot,
+  .section-heading-animated__line {
+    animation: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-heading-animated__tag {
+    margin-bottom: 0.75rem;
+    padding: 0.44rem 0.72rem;
+    font-size: 0.7rem;
+  }
+
+  .section-heading-animated__subtitle {
+    margin-top: 0.75rem;
+  }
+}

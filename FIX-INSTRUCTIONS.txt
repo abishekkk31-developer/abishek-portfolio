@@ -1,0 +1,20 @@
+ABISHEK PORTFOLIO - FIXED VERSION
+
+What was fixed:
+1. Experience responsibility bullets no longer depend on individual viewport animations, so lower bullets cannot remain invisible while scrolling.
+2. Smart Expense Tracker highlights no longer depend on individual viewport animations.
+3. Scroll reveal triggers earlier and uses once=true so sections do not repeatedly hide.
+4. Main sections are explicitly layered above the fixed decorative background.
+5. Experience/project content has explicit visibility safety.
+6. Added reduced-motion accessibility fallback.
+7. The existing 3D design and links were preserved.
+
+Install/run:
+1. Replace your existing src folder with the src folder from this ZIP (or use the entire project files).
+2. Keep your existing node_modules if it currently works.
+3. In the project folder run:
+   npm install
+   npm run dev
+
+THREE.Clock warning:
+The console warning is currently produced by @react-three/fiber itself (Canvas creates THREE.Clock in the stable 9.7.0 line). This is a known upstream compatibility warning with newer Three.js versions; it is not caused by the disappearing text bug.

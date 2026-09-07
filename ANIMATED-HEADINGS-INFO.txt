@@ -1,0 +1,11 @@
+Animated section headings have been added to About, Skills, Experience, Projects, Education, Certifications, and Contact.
+
+Animation behavior:
+- Tag enters first with a soft scale + blur reveal.
+- Title rises into place with a smooth blur/fade.
+- Subtitle follows with a shorter delayed reveal.
+- A small underline sweeps in.
+- Animations run once per section and remain fully visible afterward.
+- No section heading relies on permanent opacity:0.
+
+This version is intended to replace the previous portfolio project folder.

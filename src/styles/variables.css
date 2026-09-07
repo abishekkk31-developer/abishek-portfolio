@@ -1,0 +1,56 @@
+:root {
+  /* Color Palette - Deep Blood Red, Jet Black & Crisp White */
+  --bg-primary: #040405;
+  --bg-secondary: #0a0a0d;
+  --bg-tertiary: #111116;
+  --bg-card: rgba(14, 14, 18, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+
+  --accent-primary: #b3001b;
+  --accent-secondary: #d90429;
+  --accent-green: #34d399;
+  --accent-purple: #8b0000;
+
+  --text-primary: #ffffff;
+  --text-secondary: #9e9ea7;
+  --text-muted: #52525b;
+
+  --border-glass: rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(179, 0, 27, 0.45);
+
+  --shadow-glow: 0 0 40px rgba(179, 0, 27, 0.35);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.7);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #d90429 0%, #b3001b 50%, #ffffff 100%);
+  --gradient-text: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+  --gradient-accent: linear-gradient(135deg, #8b0000 0%, #b3001b 100%);
+  --gradient-card: linear-gradient(135deg, rgba(179, 0, 27, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+
+  /* Typography */
+  --font-primary: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-max: 1200px;
+  --container-padding: 0 24px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-index layers */
+  --z-bg: -1;
+  --z-base: 0;
+  --z-card: 10;
+  --z-nav: 100;
+  --z-modal: 200;
+}

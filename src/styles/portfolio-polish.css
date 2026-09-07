@@ -1,0 +1,311 @@
+/* =========================================================
+   ABISHEK Y PORTFOLIO — GLOBAL POLISH
+   Safe global layer for spacing, responsiveness,
+   accessibility and cinematic consistency.
+========================================================= */
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  background: #050507;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #050507;
+  color: #ffffff;
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* =========================================================
+   UNIVERSAL BOX MODEL
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* =========================================================
+   INTERACTION
+========================================================= */
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* =========================================================
+   SECTION SAFETY
+========================================================= */
+
+section {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+section,
+footer,
+nav {
+  isolation: isolate;
+}
+
+/* =========================================================
+   CONTAINER SAFETY
+========================================================= */
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+}
+
+/* =========================================================
+   PREVENT HORIZONTAL BREAKAGE
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+strong,
+small {
+  overflow-wrap: break-word;
+}
+
+pre,
+code {
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+/* =========================================================
+   FOCUS STATES
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(255, 42, 75, 0.9);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background: rgba(255, 42, 75, 0.25);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(255, 42, 75, 0.25);
+  color: #ffffff;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #3c0d16 #050507;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      #7d1023,
+      #260810
+    );
+
+  border-radius: 999px;
+
+  border: 2px solid #050507;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #b3001b,
+      #4c0b17
+    );
+}
+
+/* =========================================================
+   SMOOTH IMAGE RENDERING
+========================================================= */
+
+img {
+  image-rendering: auto;
+}
+
+/* =========================================================
+   MOBILE TOUCH TARGETS
+========================================================= */
+
+@media (max-width: 768px) {
+  button,
+  .btn,
+  a {
+    touch-action: manipulation;
+  }
+}
+
+/* =========================================================
+   TABLET TYPOGRAPHY SAFETY
+========================================================= */
+
+@media (max-width: 1000px) {
+  h1,
+  h2,
+  h3 {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE OVERFLOW PROTECTION
+========================================================= */
+
+@media (max-width: 640px) {
+  body {
+    overflow-x: clip;
+  }
+
+  .container {
+    overflow: visible;
+  }
+
+  .footer,
+  .navbar,
+  .navbar__mobile,
+  section {
+    max-width: 100vw;
+  }
+}
+
+/* =========================================================
+   SMALL SCREEN BUTTON SAFETY
+========================================================= */
+
+@media (max-width: 450px) {
+  .btn {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 22px);
+  }
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  nav,
+  .navbar,
+  .navbar__mobile,
+  .footer__top-btn {
+    display: none !important;
+  }
+}

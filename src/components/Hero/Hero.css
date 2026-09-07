@@ -1,0 +1,1341 @@
+/* =========================================================
+   ABISHEK Y — HERO
+   CINEMATIC MOUNTAIN / RED MOON BACKGROUND
+========================================================= */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 0 70px;
+
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.48) 0%,
+      rgba(0, 0, 0, 0.38) 24%,
+      rgba(0, 0, 0, 0.20) 52%,
+      rgba(0, 0, 0, 0.08) 78%,
+      rgba(0, 0, 0, 0.04) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.10) 0%,
+      rgba(0, 0, 0, 0.02) 45%,
+      rgba(0, 0, 0, 0.14) 100%
+    ),
+    url('/hero-bg.png');
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  box-shadow:
+    inset 0 0 120px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================================
+   CINEMATIC ATMOSPHERE
+========================================================= */
+
+.hero::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 79% 28%,
+      rgba(255, 15, 44, 0.13) 0%,
+      rgba(180, 0, 28, 0.07) 22%,
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 53% 82%,
+      rgba(226, 0, 34, 0.08) 0%,
+      transparent 42%
+    );
+
+  mix-blend-mode: screen;
+
+  opacity: 0.85;
+}
+
+/* =========================================================
+   SOFT EDGE VIGNETTE
+========================================================= */
+
+.hero::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 52%,
+      rgba(0, 0, 0, 0.04) 72%,
+      rgba(0, 0, 0, 0.14) 100%
+    );
+}
+
+/* =========================================================
+   EXISTING GRID — VERY SUBTLE
+========================================================= */
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.014) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.014) 1px,
+      transparent 1px
+    );
+
+  background-size: 72px 72px;
+
+  opacity: 0.18;
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      transparent 80%
+    );
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      transparent 80%
+    );
+}
+
+/* =========================================================
+   RED ATMOSPHERIC GLOW
+========================================================= */
+
+.hero__glow {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  filter: blur(85px);
+
+  mix-blend-mode: screen;
+}
+
+.hero__glow--1 {
+  z-index: -1;
+
+  width: 44vw;
+  height: 44vw;
+
+  min-width: 380px;
+  min-height: 380px;
+
+  right: -10vw;
+  top: 2vh;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(219, 0, 35, 0.11) 0%,
+      rgba(145, 0, 23, 0.055) 38%,
+      transparent 72%
+    );
+
+  opacity: 0.8;
+
+  animation:
+    heroMoonAtmosphere
+    8s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.hero__glow--2 {
+  z-index: -1;
+
+  width: 62vw;
+  height: 20vw;
+
+  left: 20vw;
+  bottom: -8vw;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(229, 0, 36, 0.13) 0%,
+      rgba(160, 0, 25, 0.055) 35%,
+      transparent 72%
+    );
+
+  filter: blur(75px);
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   CONTENT LAYER
+========================================================= */
+
+.hero__inner {
+  position: relative;
+  z-index: 5;
+
+  width: min(
+    1240px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(420px, 0.95fr);
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.hero__content {
+  position: relative;
+
+  z-index: 10;
+
+  max-width: 700px;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.hero__badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  max-width: 100%;
+
+  padding:
+    9px
+    14px;
+
+  border:
+    1px solid
+    rgba(52, 211, 153, 0.24);
+
+  border-radius: 999px;
+
+  background:
+    rgba(3, 15, 12, 0.58);
+
+  color: #d7fff1;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero__badge-dot {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+
+  background: #34d399;
+
+  box-shadow:
+    0 0 11px
+    rgba(52, 211, 153, 0.72);
+
+  animation:
+    heroStatusPulse
+    2.2s
+    ease-in-out
+    infinite;
+}
+
+/* =========================================================
+   NAME — ABISHEK Y ALWAYS ONE LINE
+========================================================= */
+
+.hero__name {
+  margin:
+    24px
+    0
+    0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      58px,
+      8.2vw,
+      126px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.86;
+
+  letter-spacing:
+    -0.065em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  display: block;
+
+  width: max-content;
+
+  max-width: 100%;
+
+  text-shadow:
+    0 5px 30px
+    rgba(0, 0, 0, 0.35);
+}
+
+.hero__name-accent {
+  color: #ff243f;
+
+  text-shadow:
+    0 0 25px
+    rgba(255, 32, 60, 0.28);
+}
+
+/* =========================================================
+   TITLES
+========================================================= */
+
+.hero__titles {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 19px;
+}
+
+.hero__title-line {
+  color: #ff2944;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.065em;
+
+  text-transform: uppercase;
+}
+
+.hero__title-line--dim {
+  color: #c0c0c7;
+}
+
+.hero__title-sep {
+  color: #767681;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TAGLINE
+========================================================= */
+
+.hero__tagline-wrap {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+.hero__tagline-line {
+  width: 3px;
+
+  min-width: 3px;
+
+  height: 45px;
+
+  margin-top: 3px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ff2944,
+      rgba(255, 41, 68, 0.12)
+    );
+
+  box-shadow:
+    0 0 15px
+    rgba(255, 41, 68, 0.26);
+}
+
+.hero__tagline {
+  max-width: 590px;
+
+  margin: 0;
+
+  color: #f3f3f5;
+
+  font-size:
+    clamp(
+      17px,
+      1.7vw,
+      24px
+    );
+
+  font-weight: 650;
+
+  line-height: 1.38;
+
+  letter-spacing: -0.025em;
+
+  text-shadow:
+    0 3px 16px
+    rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero__description {
+  max-width: 590px;
+
+  margin:
+    18px
+    0
+    0;
+
+  color: #c1c1c8;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  text-shadow:
+    0 2px 12px
+    rgba(0, 0, 0, 0.45);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.hero__ctas {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 27px;
+}
+
+.btn-primary,
+.btn-secondary {
+  min-height: 47px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding:
+    0
+    16px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1062c,
+      #8a0017
+    );
+
+  border:
+    1px solid
+    rgba(255, 57, 80, 0.36);
+
+  box-shadow:
+    0 12px 30px
+    rgba(133, 0, 22, 0.3);
+}
+
+.btn-secondary {
+  color: #f5f5f7;
+
+  background:
+    rgba(7, 7, 10, 0.48);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(0, 0, 0, 0.18);
+}
+
+.hero__contact-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 47px;
+
+  padding:
+    0
+    7px;
+
+  color: #b1b1ba;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.hero__scroll {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 28px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #9a9aa4;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.hero__scroll svg {
+  color: #ff2944;
+
+  animation:
+    heroScroll
+    1.9s
+    ease-in-out
+    infinite;
+}
+
+/* =========================================================
+   3D VISUAL
+========================================================= */
+
+.hero__visual {
+  position: relative;
+
+  z-index: 10;
+
+  min-height: 590px;
+
+  display: grid;
+
+  place-items: center;
+
+  perspective: 1300px;
+
+  transform-style: preserve-3d;
+}
+
+.hero__canvas-wrapper {
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(
+      570px,
+      48vw
+    );
+
+  height:
+    min(
+      570px,
+      48vw
+    );
+
+  min-width: 430px;
+  min-height: 430px;
+
+  display: grid;
+
+  place-items: center;
+
+  transform-style: preserve-3d;
+}
+
+.hero__canvas-wrapper canvas {
+  display: block;
+
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* =========================================================
+   FALLBACK
+========================================================= */
+
+.hero__canvas-fallback {
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 29, 54, 0.32),
+      rgba(179, 0, 27, 0.08) 42%,
+      transparent 70%
+    );
+
+  filter: blur(8px);
+
+  animation:
+    fallbackPulse
+    2s
+    ease-in-out
+    infinite;
+}
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.hero__visual-orbit {
+  position: absolute;
+
+  z-index: 3;
+
+  border: 1px solid;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  opacity: 0.42;
+}
+
+.orbit-one {
+  width: 67%;
+  height: 31%;
+
+  border-color:
+    rgba(255, 37, 65, 0.2);
+
+  transform:
+    rotateX(66deg)
+    rotateZ(-12deg);
+
+  animation:
+    orbitRotateOne
+    9s
+    linear
+    infinite;
+}
+
+.orbit-two {
+  width: 84%;
+  height: 39%;
+
+  border-color:
+    rgba(255, 255, 255, 0.09);
+
+  transform:
+    rotateX(68deg)
+    rotateZ(18deg);
+
+  animation:
+    orbitRotateTwo
+    14s
+    linear
+    infinite
+    reverse;
+}
+
+/* =========================================================
+   FLOATING CODE CARDS
+========================================================= */
+
+.hero__code-snippets {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 12;
+
+  pointer-events: none;
+}
+
+.hero__code-snippet {
+  position: absolute;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  max-width: 190px;
+
+  padding:
+    8px
+    10px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  background:
+    rgba(5, 5, 8, 0.64);
+
+  color: #d0d0d6;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 7.5px;
+
+  line-height: 1.35;
+
+  box-shadow:
+    0 15px 32px
+    rgba(0, 0, 0, 0.32);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  animation:
+    snippetFloat
+    4.5s
+    ease-in-out
+    infinite;
+}
+
+.hero__code-prompt {
+  color: #ff2944;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   STATUS CARD
+========================================================= */
+
+.hero__status-card {
+  position: absolute;
+
+  right: 1%;
+
+  bottom: 7%;
+
+  z-index: 13;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 145px;
+
+  padding:
+    10px
+    12px;
+
+  border:
+    1px solid
+    rgba(52, 211, 153, 0.14);
+
+  border-radius: 9px;
+
+  background:
+    rgba(4, 11, 9, 0.64);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 15px 32px
+    rgba(0, 0, 0, 0.3);
+}
+
+.hero__status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #34d399;
+
+  box-shadow:
+    0 0 11px
+    rgba(52, 211, 153, 0.7);
+}
+
+.hero__status-card strong {
+  display: block;
+
+  color: #ececf0;
+
+  font-size: 8px;
+
+  font-weight: 750;
+}
+
+.hero__status-card span:last-child {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #858590;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroMoonAtmosphere {
+  from {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate3d(-16px, 10px, 0)
+      scale(1.05);
+  }
+}
+
+@keyframes heroStatusPulse {
+  0%,
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 7px
+      rgba(52, 211, 153, 0.4);
+  }
+
+  50% {
+    transform: scale(1.2);
+
+    box-shadow:
+      0 0 13px
+      rgba(52, 211, 153, 0.78);
+  }
+}
+
+@keyframes heroScroll {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes fallbackPulse {
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.04);
+    opacity: 0.9;
+  }
+}
+
+@keyframes orbitRotateOne {
+  from {
+    transform:
+      rotateX(66deg)
+      rotateZ(-12deg)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotateX(66deg)
+      rotateZ(-12deg)
+      rotate(360deg);
+  }
+}
+
+@keyframes orbitRotateTwo {
+  from {
+    transform:
+      rotateX(68deg)
+      rotateZ(18deg)
+      rotate(360deg);
+  }
+
+  to {
+    transform:
+      rotateX(68deg)
+      rotateZ(18deg)
+      rotate(0deg);
+  }
+}
+
+@keyframes snippetFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .hero__inner {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(350px, 0.8fr);
+
+    gap: 28px;
+  }
+
+  .hero__canvas-wrapper {
+    width: 430px;
+    height: 430px;
+
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .hero__visual {
+    min-height: 500px;
+  }
+
+  .hero__name {
+    font-size:
+      clamp(
+        56px,
+        7.7vw,
+        98px
+      );
+  }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+
+    padding:
+      105px
+      0
+      60px;
+
+    background-position:
+      57%
+      center;
+  }
+
+  .hero__inner {
+    width:
+      min(
+        100% - 36px,
+        760px
+      );
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__visual {
+    min-height: 470px;
+
+    order: 2;
+  }
+
+  .hero__canvas-wrapper {
+    width:
+      min(
+        470px,
+        80vw
+      );
+
+    height:
+      min(
+        470px,
+        80vw
+      );
+  }
+
+  .hero__name {
+    width: auto;
+
+    white-space: nowrap;
+
+    font-size:
+      clamp(
+        54px,
+        12vw,
+        86px
+      );
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .hero {
+    padding:
+      92px
+      0
+      45px;
+
+    background-position:
+      60%
+      center;
+  }
+
+  .hero__inner {
+    width:
+      calc(100% - 28px);
+  }
+
+  .hero__badge {
+    font-size: 8px;
+
+    padding:
+      8px
+      11px;
+  }
+
+  /* ONE LINE ON MOBILE */
+  .hero__name {
+    width: 100%;
+
+    white-space: nowrap;
+
+    font-size:
+      clamp(
+        42px,
+        13.5vw,
+        70px
+      );
+
+    letter-spacing:
+      -0.07em;
+  }
+
+  .hero__titles {
+    gap: 6px;
+
+    margin-top: 14px;
+  }
+
+  .hero__title-line {
+    font-size: 9px;
+  }
+
+  .hero__title-sep {
+    font-size: 10px;
+  }
+
+  .hero__tagline-wrap {
+    margin-top: 19px;
+
+    gap: 10px;
+  }
+
+  .hero__tagline-line {
+    height: 39px;
+  }
+
+  .hero__tagline {
+    font-size: 15px;
+  }
+
+  .hero__description {
+    margin-top: 14px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+  .hero__ctas {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    margin-top: 22px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .hero__contact-link {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .hero__scroll {
+    margin-top: 23px;
+  }
+
+  .hero__visual {
+    min-height: 370px;
+  }
+
+  .hero__canvas-wrapper {
+    width:
+      min(
+        390px,
+        94vw
+      );
+
+    height:
+      min(
+        390px,
+        94vw
+      );
+  }
+
+  .hero__code-snippet {
+    max-width: 130px;
+
+    padding:
+      6px
+      8px;
+
+    font-size: 6px;
+  }
+
+  .hero__status-card {
+    right: 0;
+
+    bottom: 3%;
+
+    min-width: 125px;
+
+    padding:
+      8px
+      9px;
+  }
+
+  .hero__status-card strong {
+    font-size: 7px;
+  }
+
+  .hero__status-card span:last-child {
+    font-size: 6px;
+  }
+
+  .hero__glow--1 {
+    width: 420px;
+    height: 420px;
+
+    right: -230px;
+  }
+
+  .hero__glow--2 {
+    width: 520px;
+    height: 190px;
+
+    left: -120px;
+  }
+
+  .hero__grid {
+    opacity: 0.12;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .hero__name {
+    font-size: 39px;
+
+    white-space: nowrap;
+
+    letter-spacing:
+      -0.075em;
+  }
+
+  .hero__title-line {
+    font-size: 8px;
+  }
+
+  .hero__tagline {
+    font-size: 14px;
+  }
+
+  .hero__visual {
+    min-height: 330px;
+  }
+
+  .hero__canvas-wrapper {
+    width: 330px;
+    height: 330px;
+  }
+
+  .hero__code-snippet {
+    max-width: 115px;
+
+    font-size: 5.5px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__glow--1,
+  .hero__badge-dot,
+  .hero__scroll svg,
+  .hero__visual-orbit,
+  .hero__code-snippet,
+  .hero__canvas-fallback {
+    animation: none !important;
+  }
+}
